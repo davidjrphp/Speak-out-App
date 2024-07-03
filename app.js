@@ -32,3 +32,18 @@ stop_btn.onclick = () => {
 clear_btn.onclick = () => {
     document.querySelector(".text").value = "";
 };
+
+// Communication Buttons
+const communicationButtons = document.querySelectorAll('.communication-btn');
+communicationButtons.forEach(button => {
+    button.onclick = () => {
+        let speech = new SpeechSynthesisUtterance();
+        speech.lang = "en-US";
+        speech.text = button.innerText;
+        speech.voice = window.speechSynthesis.getVoices()[1];
+        speech.rate = 1;
+        speech.volume = 1;
+        speech.pitch = 5;
+        speechSynthesis.speak(speech);
+    };
+});

@@ -10,25 +10,42 @@
 <body>
     <div class="container">
         <h2 class="title">Speak out App</h2>
-        <textarea class="text" placeholder="Write text here..."></textarea>
-        <label for="repeat">Repeat <span>*</span></label>
-        <select id="repeat">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <div class="button-group">
-            <button id="convert-to-text-btn">Speak</button>
-            <button id="stop-btn">Stop</button>
-            <button id="clear-btn">Clear</button>
+        <div class="columns">
+            <div class="left-column">
+                <button class="communication-btn">I want to eat</button>
+                <button class="communication-btn">I want to bath</button>
+                <button class="communication-btn">I need water</button>
+                <button class="communication-btn">Take me to the toilet</button>
+                <button class="communication-btn">wake me up</button>
+                <button class="communication-btn">I need medicine</button>
+                <button class="communication-btn">I feel the pain</button>
+                <button class="communication-btn">Help me!</button>
+                <button class="communication-btn">I want to sleep</button>
+                <button class="communication-btn">I'm tired</button>
+                <button class="communication-btn">Yes!</button>
+                <button class="communication-btn">No!</button>
+            </div>
+            <div class="right-column">
+                <textarea class="text" placeholder="Write text here..."></textarea>
+                <label for="repeat">Repeat <span>*</span></label>
+                <select id="repeat">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <div class="button-group">
+                    <button id="convert-to-text-btn">Speak</button>
+                    <button id="stop-btn">Stop</button>
+                    <button id="clear-btn">Clear</button>
+                </div>
+                <select id="rate" style="display: none;">
+                    <option value="1">1x</option>
+                </select>
+            </div>
         </div>
-        <select id="rate" style="display: none;">
-            <option value="1">1x</option>
-        </select>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>

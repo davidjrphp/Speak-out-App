@@ -16,11 +16,11 @@ body {
 }
 
 .container {
-    width: 500px;
+    width: 700px;
     background: #fff;
     padding: 20px 30px;
     border-radius: 40px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .container .title {
@@ -30,98 +30,131 @@ body {
     text-align: center;
 }
 
-.container textarea {
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.left-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.communication-btn {
+    width: 130px;
+    padding: 10px;
+    background: #234567;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.right-column textarea {
     display: block;
     width: 100%;
     padding: 10px 10px;
-    height: 250px;
+    height: 150px;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     border: 3px solid #234567;
 }
 
-.container textarea:focus {
+.right-column textarea:focus {
     outline: none;
 }
 
-.container label {
+.right-column label {
     margin-top: 20px;
     display: block;
 }
 
-.container span {
+.right-column span {
     color: red;
 }
 
-.container select {
+.right-column select {
     display: block;
-    width: 200px;
+    width: 100%;
     padding: 5px 5px;
     border: 2px solid #234567;
     color: #234567;
 }
 
-.container select:focus {
+.right-column select:focus {
     outline: none;
 }
 
-.container button {
-    width: 200px;
-    padding: 10px 10px;
+.right-column .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     margin-top: 20px;
+}
+
+.right-column button {
+    width: 100%;
+    padding: 10px;
     background: #ecc311;
     outline: none;
     border-radius: 20px;
     border: none;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
-}
-
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .container {
-        width: 80%;
+        width: 90%;
         padding: 15px 20px;
     }
-    
+
     .container .title {
         font-size: 30px;
     }
-    
-    .container textarea {
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .right-column textarea {
         height: 200px;
     }
-    
-    .container select,
-    .container button {
-        width: 100%;
+
+    .right-column button {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 90%;
+        width: 95%;
         padding: 10px 15px;
     }
-    
+
     .container .title {
         font-size: 24px;
     }
-    
-    .container textarea {
+
+    .right-column textarea {
         height: 150px;
     }
-    
-    .container select,
-    .container button {
-        width: 100%;
+
+    .right-column button {
+        font-size: 12px;
     }
 }
